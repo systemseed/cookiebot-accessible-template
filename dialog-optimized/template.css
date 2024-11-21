@@ -178,18 +178,12 @@
 * Content
 */
 
-#CB .cookiebanner__main {}
-
 #CB .cookiebanner__main__inner {
   /* legacy browser compatibility */
   max-width: 1080px;
   /* legacy browser compatibility end */
   max-width: var(--cb-dialog-max-width, 1080px);
   margin: 0 auto;
-}
-
-#CB .cookiebanner__main__content {
-
 }
 
 @media (min-width: 800px) {
@@ -402,9 +396,6 @@
   margin: 0;
   border: 0;
   min-width: 0;
-}
-
-#CB .cookiebanner__preference__heading {
 }
 
 @media (min-width: 540px) {
