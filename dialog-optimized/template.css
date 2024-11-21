@@ -2,7 +2,7 @@
  * Containers
  */
 
- #CookieBanner {
+ #CB {
   position: fixed;
   z-index: 2147483645;
   min-height: 100vh;
@@ -16,13 +16,13 @@
   display: none;
 }
 
-#CookieBanner.is-visible-cookie-banner {
+#CB.is-visible-cookie-banner {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#CookieBanner, #CookieBanner * {
+#CB, #CB * {
   box-sizing: border-box;
   text-underline-offset: .125em;
   outline-offset: 3px;
@@ -56,9 +56,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #CookieBanner * {
-    animation-duration: 0.001ms !important;
-    transition-duration: 0.001ms !important;
+  #CB * {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
   }
 }
 
@@ -84,10 +84,10 @@
 
 @media (min-width: 450px) {
   #CookieBannerNotice {
-    padding: 24px;
-    max-height: calc(100vh - 48px);
-    max-height: calc(100vh - 48px - env(safe-area-inset-bottom, 0));
-    width: calc(100% - 48px);
+      padding: 24px;
+      max-height: calc(100vh - 48px);
+      max-height: calc(100vh - 48px - env(safe-area-inset-bottom, 0));
+      width: calc(100% - 48px);
   }
 }
 
@@ -104,19 +104,19 @@
 
 @media (min-width: 800px) {
   #CookieBannerNotice {
-    padding: 48px;
+      padding: 48px;
   }
 }
 
 @media (min-width: 1000px) {
   #CookieBannerNotice {
-    padding: 64px;
+      padding: 64px;
   }
 }
 
 /**
- * Utils
- */
+* Utils
+*/
 
 @keyframes cookieBannerFadeIn {
   0% {opacity:0;}
@@ -135,7 +135,7 @@
   100% {opacity:0;transform:translateY(96px);}
 }
 
-#CookieBanner button {
+#CB button {
   background: none;
   border: 0;
   border-radius: 0;
@@ -146,22 +146,22 @@
   padding: 0;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-#CookieBanner button > * {
+#CB button > * {
   pointer-events: none;
 }
 
-#CookieBanner ul, li {
+#CB ul, li {
   list-style: none;
   margin: 0;
   padding: 0;
   text-indent: 0;
 }
 
-#CookieBanner .screen-reader-text {
+#CB .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -175,12 +175,12 @@
 }
 
 /**
- * Content
- */
+* Content
+*/
 
- #CookieBanner .cookiebanner__main {}
+#CB .cookiebanner__main {}
 
-#CookieBanner .cookiebanner__main__inner {
+#CB .cookiebanner__main__inner {
   /* legacy browser compatibility */
   max-width: 1080px;
   /* legacy browser compatibility end */
@@ -188,17 +188,17 @@
   margin: 0 auto;
 }
 
-#CookieBanner .cookiebanner__main__content {
+#CB .cookiebanner__main__content {
 
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__main__content {
-    margin-right: 48px;
+  #CB .cookiebanner__main__content {
+      margin-right: 48px;
   }
 }
 
-#CookieBanner .cookiebanner__main__title {
+#CB .cookiebanner__main__title {
   /* legacy browser compatibility */
   font-weight: bold;
   font-size: 20px;
@@ -212,16 +212,16 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__main__title {
-    /* legacy browser compatibility */
-    font-size: 28px;
-    /* legacy browser compatibility end */
-    font-size: var(--cb-title-font-size-desktop, 28px);
-    margin-bottom: 20px;
+  #CB .cookiebanner__main__title {
+      /* legacy browser compatibility */
+      font-size: 28px;
+      /* legacy browser compatibility end */
+      font-size: var(--cb-title-font-size-desktop, 28px);
+      margin-bottom: 20px;
   }
 }
 
-#CookieBanner .cookiebanner__main__description {
+#CB .cookiebanner__main__description {
   /* legacy browser compatibility */
   font-size: 15px;
   /* legacy browser compatibility end */
@@ -235,37 +235,37 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__main__description {
-    /* legacy browser compatibility */
-    font-size: 16px;
-    /* legacy browser compatibility end */
-    font-size: var(--cb-description-font-size-desktop, 16px);
-    line-height: 1.75;
+  #CB .cookiebanner__main__description {
+      /* legacy browser compatibility */
+      font-size: 16px;
+      /* legacy browser compatibility end */
+      font-size: var(--cb-description-font-size-desktop, 16px);
+      line-height: 1.75;
   }
 }
 
 /**
- * Buttons
- */
-#CookieBanner .cookiebanner__buttons {
+* Buttons
+*/
+#CB .cookiebanner__buttons {
   flex-shrink: 0;
   margin-top: 32px;
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__buttons {
-    margin-top: 40px;
+  #CB .cookiebanner__buttons {
+      margin-top: 40px;
   }
 }
 
 
-#CookieBanner .cookiebanner__buttons ul {
+#CB .cookiebanner__buttons ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-#CookieBanner .cookiebanner__buttons li {
+#CB .cookiebanner__buttons li {
   margin-bottom: 12px;
   margin-left: 8px;
   margin-right: 8px;
@@ -273,17 +273,12 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__buttons li {
-    width: auto;
+  #CB .cookiebanner__buttons li {
+      width: auto;
   }
 }
 
-#CookieBanner .cookiebanner__buttons li:last-of-type {
-  width: 100%;
-  margin-bottom: 0;
-}
-
-#CookieBanner .cookiebanner__buttons__details {
+#CB .cookiebanner__buttons__details {
   /* legacy browser compatibility */
   font-size: 16px;
   /* legacy browser compatibility end */
@@ -295,14 +290,14 @@
 }
 
 
-#CookieBanner .cookiebanner__buttons__details:hover,
-#CookieBanner .cookiebanner__buttons__details:focus,
-#CookieBanner .cookiebanner__buttons__details:active {
+#CB .cookiebanner__buttons__details:hover,
+#CB .cookiebanner__buttons__details:focus,
+#CB .cookiebanner__buttons__details:active {
   text-decoration: underline;
 }
 
-#CookieBanner .cookiebanner__buttons__accept,
-#CookieBanner .cookiebanner__buttons__deny {
+#CB .cookiebanner__buttons__accept,
+#CB .cookiebanner__buttons__deny {
   /* legacy browser compatibility */
   background: transparent;
   border-radius: 3px;
@@ -325,23 +320,23 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__buttons__accept,
-  #CookieBanner .cookiebanner__buttons__deny {
-    font-size: var(--cb-button-font-size, 16px);
-    padding: 18px 24px;
-    min-width: 288px;
+  #CB .cookiebanner__buttons__accept,
+  #CB .cookiebanner__buttons__deny {
+      font-size: var(--cb-button-font-size, 16px);
+      padding: 18px 24px;
+      min-width: 288px;
   }
 }
 
-#CookieBanner .cookiebanner__buttons__accept {
+#CB .cookiebanner__buttons__accept {
   color: var(--cb-accept-button-color, var(--cb-button-color, #fff));
   background: var(--cb-accept-button-background, var(--cb-button-background, #0f0f0f));
   border: var(--cb-accept-button-border, var(--cb-button-border, 2px solid #0f0f0f));
 }
 
-#CookieBanner .cookiebanner__buttons__accept:hover,
-#CookieBanner .cookiebanner__buttons__accept:focus,
-#CookieBanner .cookiebanner__buttons__accept:active {
+#CB .cookiebanner__buttons__accept:hover,
+#CB .cookiebanner__buttons__accept:focus,
+#CB .cookiebanner__buttons__accept:active {
   /* legacy browser compatibility */
   color: #fff;
   background: #0f0f0f;
@@ -352,9 +347,9 @@
 }
 
 
-#CookieBanner .cookiebanner__buttons__deny:hover,
-#CookieBanner .cookiebanner__buttons__deny:focus,
-#CookieBanner .cookiebanner__buttons__deny:active {
+#CB .cookiebanner__buttons__deny:hover,
+#CB .cookiebanner__buttons__deny:focus,
+#CB .cookiebanner__buttons__deny:active {
   /* legacy browser compatibility */
   color: #fff;
   background: #0f0f0f;
@@ -365,17 +360,17 @@
 }
 
 /**
- * Details
- */
+* Details
+*/
 
-#CookieBanner .cookiebanner__details {
+#CB .cookiebanner__details {
   margin-top: 24px;
   display: none;
 }
-#CookieBanner.is-details-open .cookiebanner__details {
+#CB.is-details-open .cookiebanner__details {
   display: block;
 }
-#CookieBanner .cookiebanner__details__inner {
+#CB .cookiebanner__details__inner {
   /* legacy browser compatibility */
   max-width: 1080px;
   /* legacy browser compatibility end */
@@ -384,22 +379,22 @@
 }
 
 /**
- * Preferences
- */
+* Preferences
+*/
 
-#CookieBanner .cookiebanner__details__preferences {
+#CB .cookiebanner__details__preferences {
   display: flex;
   flex-direction: column;
   margin-top: 16px;
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__details__preferences {
-    margin-top: 24px;
+  #CB .cookiebanner__details__preferences {
+      margin-top: 24px;
   }
 }
 
-#CookieBanner .cookiebanner__details__preferences__options {
+#CB .cookiebanner__details__preferences__options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -409,17 +404,17 @@
   min-width: 0;
 }
 
-#CookieBanner .cookiebanner__preference__heading {
+#CB .cookiebanner__preference__heading {
 }
 
 @media (min-width: 540px) {
-  #CookieBanner .cookiebanner__preference__heading {
-    display: flex;
-    align-items: center;
+  #CB .cookiebanner__preference__heading {
+      display: flex;
+      align-items: center;
   }
 }
 
-#CookieBanner .cookiebanner__preference {
+#CB .cookiebanner__preference {
   background: #f4f4f4;
   padding: 16px;
   width: 100%;
@@ -427,23 +422,23 @@
 }
 
 @media (min-width: 540px) {
-  #CookieBanner .cookiebanner__preference {
-    margin-bottom: 16px;
+  #CB .cookiebanner__preference {
+      margin-bottom: 16px;
   }
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__preference {
-    padding: 32px;
+  #CB .cookiebanner__preference {
+      padding: 32px;
   }
 }
 
-#CookieBanner .cookiebanner__preference::last-of-type {
+#CB .cookiebanner__preference::last-of-type {
   margin-bottom: 0;
 }
 
 /* Hide the input */
-#CookieBanner .cookiebanner__preference input {
+#CB .cookiebanner__preference input {
   position: absolute;
   opacity: 0;
   width: 0;
@@ -451,25 +446,25 @@
   overflow: hidden;
 }
 
-#CookieBanner .cookiebanner__preference__label {
+#CB .cookiebanner__preference__label {
   display: flex;
   align-items: center;
   flex-grow: 1;
   flex-direction: column;
 }
 @media (min-width: 540px) {
-  #CookieBanner .cookiebanner__preference__label {
-    flex-direction: row;
+  #CB .cookiebanner__preference__label {
+      flex-direction: row;
   }
 }
 
-#CookieBanner .cookiebanner__preference input:focus + .cookiebanner__preference__label,
-#CookieBanner .cookiebanner__preference__label:hover {
+#CB .cookiebanner__preference input:focus + .cookiebanner__preference__label,
+#CB .cookiebanner__preference__label:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
-#CookieBanner .cookiebanner__preference__ui {
+#CB .cookiebanner__preference__ui {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -481,18 +476,18 @@
   cursor: pointer;
 }
 
-#CookieBanner .cookiebanner__preference__text {
+#CB .cookiebanner__preference__text {
   display: block;
   margin-top: 12px;
 }
 @media (min-width: 540px) {
-  #CookieBanner .cookiebanner__preference__text {
-    margin-left: 16px;
-    margin-top: 0;
+  #CB .cookiebanner__preference__text {
+      margin-left: 16px;
+      margin-top: 0;
   }
 }
 
-#CookieBanner .cookiebanner__preference__title {
+#CB .cookiebanner__preference__title {
   display: block;
   font-weight: bold;
   margin: 0;
@@ -500,60 +495,60 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__preference__title {
-    font-size: 18px;
+  #CB .cookiebanner__preference__title {
+      font-size: 18px;
   }
 }
 
 
-#CookieBanner .cookiebanner__preference__description {
+#CB .cookiebanner__preference__description {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
 }
 
-#CookieBanner .cookiebanner__preference__toggle {
+#CB .cookiebanner__preference__toggle {
   flex-shrink: 0;
   margin-left: 32px;
 }
 
 @media (max-width: 539px) {
-  #CookieBanner .cookiebanner__preference__toggle {
-    flex-shrink: 0;
-    display: block;
-    text-align: center;
-    width: 100%;
-    margin-top: 16px;
-    margin-left: 0;
+  #CB .cookiebanner__preference__toggle {
+      flex-shrink: 0;
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin-top: 16px;
+      margin-left: 0;
   }
 }
 
-#CookieBanner .cookiebanner__preference__toggle:hover,
-#CookieBanner .cookiebanner__preference__toggle:focus,
-#CookieBanner .cookiebanner__preference__toggle:active {
+#CB .cookiebanner__preference__toggle:hover,
+#CB .cookiebanner__preference__toggle:focus,
+#CB .cookiebanner__preference__toggle:active {
   text-decoration: underline;
 }
 
-#CookieBanner .cookiebanner__preference__more {
+#CB .cookiebanner__preference__more {
   display: none;
   margin-top: 24px;
 }
 
-#CookieBanner .cookiebanner__preference__more__description {
+#CB .cookiebanner__preference__more__description {
   margin: 0;
   font-size: 16px;
 }
 
-#CookieBanner .cookiebanner__preference__more__list {
+#CB .cookiebanner__preference__more__list {
   margin-top: 16px;
   width: 100%;
   overflow: auto;
   border: 1px solid rgba(0,0,0,.25);
   background:
-      linear-gradient(to right, #f4f4f4 30%, rgba(255,255,255,0)),
-      linear-gradient(to right, rgba(255,255,255,0), #f4f4f4 70%) 0 100%,
-      radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-      radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+          linear-gradient(to right, #f4f4f4 30%, rgba(255,255,255,0)),
+          linear-gradient(to right, rgba(255,255,255,0), #f4f4f4 70%) 0 100%,
+          radial-gradient(farthest-side at 0% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
+          radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
   background-repeat: no-repeat;
   background-color: #f4f4f4;
   background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
@@ -561,26 +556,26 @@
   background-attachment: local, local, scroll, scroll;
 }
 
-#CookieBanner .cookiebanner__preference__more__list table {
+#CB .cookiebanner__preference__more__list table {
   width: 100%;
 }
 
-#CookieBanner .cookiebanner__preference__more__list tbody td {
+#CB .cookiebanner__preference__more__list tbody td {
   background: transparent;
   border-top: 1px solid rgba(0,0,0,.25);
 }
 
-#CookieBanner .cookiebanner__preference__more__list tbody .CybotCookiebotDialogDetailBodyContentCookieTypeTableEmpty {
+#CB .cookiebanner__preference__more__list tbody .CybotCookiebotDialogDetailBodyContentCookieTypeTableEmpty {
   border-top: 0;
 }
 
-#CookieBanner .cookiebanner__preference__more__list a {
+#CB .cookiebanner__preference__more__list a {
   text-decoration: underline;
   color: inherit;
 }
 
-#CookieBanner .cookiebanner__preference__more__list th,
-#CookieBanner .cookiebanner__preference__more__list td {
+#CB .cookiebanner__preference__more__list th,
+#CB .cookiebanner__preference__more__list td {
   vertical-align: baseline;
   min-width: 176px;
   text-align: left;
@@ -591,17 +586,17 @@
 }
 
 @media (min-width: 800px) {
-  #CookieBanner .cookiebanner__preference__more__list th,
-  #CookieBanner .cookiebanner__preference__more__list td {
-    padding: 8px;
+  #CB .cookiebanner__preference__more__list th,
+  #CB .cookiebanner__preference__more__list td {
+      padding: 8px;
   }
 }
 
-#CookieBanner .cookiebanner__preference__more.is-open {
+#CB .cookiebanner__preference__more.is-open {
   display: block;
 }
 
-#CookieBanner .cookiebanner__preference__ui__handle {
+#CB .cookiebanner__preference__ui__handle {
   display: flex;
   margin-left: 8px;
   justify-content: center;
@@ -615,23 +610,23 @@
 }
 
 
-#CookieBanner .cookiebanner__preference input:checked + label .cookiebanner__preference__ui {
+#CB .cookiebanner__preference input:checked + label .cookiebanner__preference__ui {
   /* legacy browser compatibility */
   background: #16a085;
   /* legacy browser compatibility end */
   background: var(--cb-preference-accent-color, #16a085);
 }
-#CookieBanner .cookiebanner__preference input:checked + label .cookiebanner__preference__ui__handle {
+#CB .cookiebanner__preference input:checked + label .cookiebanner__preference__ui__handle {
   margin-left: 50%;
   background: #fff;
 }
 
-#CookieBanner .cookiebanner__details__preferences__buttons {
+#CB .cookiebanner__details__preferences__buttons {
   text-align: center;
   margin-top: 8px;
 }
 
-#CookieBanner .cookiebanner__accept-selection {
+#CB .cookiebanner__accept-selection {
   /* legacy browser compatibility */
   background: transparent;
   border: 2px solid #0f0f0f;
@@ -653,9 +648,9 @@
   width: 100%;
 }
 
-#CookieBanner .cookiebanner__accept-selection:hover,
-#CookieBanner .cookiebanner__accept-selection:focus,
-#CookieBanner .cookiebanner__accept-selection:active {
+#CB .cookiebanner__accept-selection:hover,
+#CB .cookiebanner__accept-selection:focus,
+#CB .cookiebanner__accept-selection:active {
   /* legacy browser compatibility */
   color: #fff;
   background: #0f0f0f;
@@ -666,14 +661,31 @@
 }
 
 /**
- * Updated
- */
+* Updated
+*/
 
-#CookieBanner .cookiebanner__details__updated {
+#CB .cookiebanner__details__updated {
   margin-top: 24px;
   text-align: center;
 }
-#CookieBanner .cookiebanner__details__updated p {
+#CB .cookiebanner__details__updated p {
   font-size: 15px;
 }
+#CB li:before {
+  position: relative;
+}
 
+/**
+* Custom CW styles.
+*/
+#CB .cookiebanner__preference__text.cookiebanner__preference__text__unclussified {
+width: 100%;
+margin-left: 0;
+text-align: center;
+}
+
+@media (min-width: 800px) {
+#CB .cookiebanner__preference__text.cookiebanner__preference__text__unclussified {
+  text-align: left;
+}
+}
