@@ -60,14 +60,17 @@
 }
 
 #CookieBannerNotice {
+  width: 100%;
+  width: calc(100% - 24px);
+  max-width: var(--cb-dialog-max-width, 1080px);
+}
+
+#CookieBannerNotice {
   padding: 40px 28px;
   overflow: auto;
   max-height: 100vh;
   max-height: calc(100vh - 24px);
   max-height: calc(100vh - 24px - env(safe-area-inset-bottom, 0));
-  width: 100%;
-  width: calc(100% - 24px);
-  max-width: var(--cb-dialog-max-width, 1080px);
   background: #fff;
   color: var(--cb-text-color, #0f0f0f);
   margin: 0 auto;
@@ -250,10 +253,13 @@
 }
 
 #CB .cookiebanner__buttons__details {
+  width: 100%;
+}
+
+#CB .cookiebanner__buttons__details {
   font-size: var(--cb-details-button-font-size, 16px);
   margin-top: 8px;
   padding: 8px 16px;
-  width: 100%;
   text-decoration: underline;
 }
 
@@ -262,6 +268,11 @@
 #CB .cookiebanner__buttons__details:focus,
 #CB .cookiebanner__buttons__details:active {
   text-decoration: underline;
+}
+
+#CB .cookiebanner__buttons__accept,
+#CB .cookiebanner__buttons__deny {
+  width: 100%;
 }
 
 #CB .cookiebanner__buttons__accept,
@@ -277,7 +288,6 @@
   border: var(--cb-button-border, 2px solid #0f0f0f);
   color: var(--cb-button-color, #0f0f0f);
   text-align: center;
-  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -362,9 +372,12 @@
 }
 
 #CB .cookiebanner__preference {
+  width: 100%;
+}
+
+#CB .cookiebanner__preference {
   background: #f4f4f4;
   padding: 16px;
-  width: 100%;
   margin-bottom: 12px;
 }
 
@@ -571,6 +584,10 @@
 }
 
 #CB .cookiebanner__accept-selection {
+  width: 100%;
+}
+
+#CB .cookiebanner__accept-selection {
   transition: .2s ease-in-out;
   border-radius: var(--cb-button-border-radius, 3px);
   background: var(--cb-button-background, transparent);
@@ -582,7 +599,6 @@
   display: block;
   padding: 16px 24px;
   text-align: center;
-  width: 100%;
 }
 
 #CB .cookiebanner__accept-selection:hover,
