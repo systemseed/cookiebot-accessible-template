@@ -143,7 +143,7 @@
   -ms-user-select: none;
 }
 
-#CB button > * {
+#CB button > span {
   pointer-events: none;
 }
 
