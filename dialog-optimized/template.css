@@ -14,18 +14,15 @@
   margin: 0 auto;
   pointer-events: none;
   display: none;
+  box-sizing: border-box;
+  text-underline-offset: .125em;
+  outline-offset: 3px;
 }
 
 #CB.is-visible-cookie-banner {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#CB, #CB * {
-  box-sizing: border-box;
-  text-underline-offset: .125em;
-  outline-offset: 3px;
 }
 
 #CookieBannerOverlay {
